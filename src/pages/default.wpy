@@ -1,0 +1,607 @@
+<style lang="less">
+  
+  @import "../assets/fonts/PingFang/pingfang.wxss";
+
+  swiper {
+    width: 100%;
+  }
+  
+  swiper image {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .top {
+    width: 100%;
+    position: relative;
+    & .top-bg {
+      width: 100%;
+      position: relative;
+      display: block;
+    }
+    & .top-inside {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      & text {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    & .top-logo {
+      max-width: 90px;
+      display: block;
+    }
+    & .top-title {
+      color: #fff;
+      margin-top: 10px;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      font-family: "PingFangHeavy";
+    }
+    & .top-sub-title {
+      margin-top: 8px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 100;
+      letter-spacing: 1px;
+      font-family: "PingFangMedium";
+    }
+  }
+  .cards {
+    padding: 35px 0;
+    box-sizing: border-box;
+    
+    & .title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "PingFangHeavy";
+      letter-spacing: 1px;
+    }
+    & .division {
+      width: 50px;
+      height: 4px;
+      margin: 6px auto;
+      & image {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    & .body {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      & .item {
+        width: 50%;
+        height: 145px;
+        padding: 10px 5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        transition: all 0.15s ease-in-out;
+        & image {
+          width: 50%;
+          max-width: 65px;
+        }
+        & text {
+          width: 100%;
+          display: block;
+          text-align: center;
+          font-size: 14px;
+          color: #00A9DA;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    
+    &.service {
+      padding: 35px !important;
+    }
+    &.absorbed {
+      padding-bottom: 0;
+      & swiper {
+        height: 300px;
+        & swiper-item image {
+          height: 200px !important;
+        }
+        & .wx-swiper-dots {
+          margin-bottom: 102px;
+          & .wx-swiper-dot {
+            width: 25px;
+            height: 6px;
+            border-radius: 6px;
+          }
+        }
+      }
+      & .min-ad {
+        display: flex;
+        align-items: center;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        & .title {
+          width: 100%;
+          display: inline-block;
+          text-align: left;
+          font-family: "PingFangHeavy";
+          font-weight: 500;
+          font-size: 16px;
+        }
+        & .sub-title {
+          width: 100%;
+          display: inline-block;
+          text-align: left;
+          font-family: "PingFangMedium";
+          font-size: 13px;
+          letter-spacing: 1px;
+        }
+        & button {
+          width: 60px;
+          font-size: 16px;
+          letter-spacing: 2px;
+          color: #00A9DA;
+          border: 2px solid #00A9DA;
+          line-height: 0;
+          padding: 15px 0;
+          text-align: center;
+          border-radius: 8px;
+        }
+      }
+    }
+    &.what, &.seller {
+      & .body {
+        padding: 0 10px;
+        width: 100%;
+        height: 280px;
+        box-sizing: border-box;
+        overflow: hidden;
+        & .over {
+          width: 100%;
+          position: relative;
+          overflow: auto;
+          & .fix {
+            height: 100%;
+            position: absolute;
+            white-space: nowrap;
+          }
+        }
+      }
+      & .item {
+        width: 200px;
+        height: 100%;
+        margin: 0 10px;
+        border-radius: 0;
+        display: inline-block;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        & .icon {
+          display: flex;
+          height: 170px;
+          align-items: center;
+          justify-content: center;
+        }
+        & .docs {
+          & text {
+            color: #000;
+          }
+          & .title {
+            font-family: "PingFangHeavy";
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+          }
+          & .sub-title {
+            font-family: "PingFangMedium";
+            font-size: 12px;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+    &.seller {
+      & .body {
+        height: 170px;
+      }
+      & .item {
+        & .icon {
+          height: 110px;
+        }
+        & .docs {
+          & .title {
+            font-family: PingFangHeavy;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    &.coach {
+      & .body {
+        position: relative;
+        & image {
+          width: 100%;
+          height: 340px;
+          margin-top: 10px;
+        }
+      }
+    }
+    &.flow {
+      & .body {
+        height: 540px;
+        position: relative;
+      }
+      & image {
+        width: 100%;
+        height: 540px;
+      }
+    }
+  }
+</style>
+
+<template>
+  <view class="container">
+    <!-- 头部 -->
+    <view class="top">
+      <image class="top-bg" mode="widthFix" src="/assets/image/top_bg.jpg" />
+      <view class="top-inside">
+        <image class="top-logo" mode="widthFix" src="/assets/image/logo.png" />
+        <text class="top-title">微信小程序解决方案</text>
+        <text class="top-sub-title">助您的品牌抢先赢得商机</text>
+      </view>
+    </view>
+    
+    <!-- 服务范畴 -->
+    <view class="cards service">
+      <view class="title">服务范畴</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+        <view class="item">
+          <image mode="widthFix" src="/assets/image/service_ra.png" />
+          <text>需求分析</text>
+        </view>
+        <view class="item">
+          <image mode="widthFix" src="/assets/image/service_register_name.png" />
+          <text>名称注册</text>
+        </view>
+        <view class="item">
+          <image mode="widthFix" src="/assets/image/service_prototype.png" />
+          <text>原型设计</text>
+        </view>
+        <view class="item">
+          <image mode="widthFix" src="/assets/image/service_ui.png" />
+          <text>UI设计</text>
+        </view>
+        <view class="item">
+          <image mode="widthFix" src="/assets/image/service_app.png" />
+          <text>程序开发</text>
+        </view>
+        <view class="item">
+          <image mode="widthFix" src="/assets/image/service_solution.png" />
+          <text>解决方案</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 专注领域 -->
+    <view class="cards bg-gray absorbed">
+      <view class="title">专注领域</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+        <swiper
+          indicator-dots
+          indicator-color="white"
+          indicator-active-color="#00A9DA"
+          autoplay
+        >
+          <swiper-item>
+            <image mode="aspectFill" src="/assets/image/cover_01.jpg" class="slide-image" />
+            <view class="min-ad bg-white">
+              <view>
+                <text class="title">金融理财</text>
+                <text class="sub-title">信贷政策 预约办卡 积分兑换 本地优惠</text>
+              </view>
+              <view style="width: 80px;">
+                <button class="bg-white">咨询</button>
+              </view>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <image mode="aspectFill" src="/assets/image/cover_02.jpg" class="slide-image" />
+            <view class="min-ad bg-white">
+              <view>
+                <text class="title">IT服务</text>
+                <text class="sub-title">作品展示 在线咨询 预约到店 在线销售</text>
+              </view>
+              <view style="width: 80px;">
+                <button class="bg-white">咨询</button>
+              </view>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <image mode="aspectFill" src="/assets/image/cover_03.jpg" class="slide-image" />
+            <view class="min-ad bg-white">
+              <view>
+                <text class="title">旅游服务</text>
+                <text class="sub-title">门票预订 景点展示 旅游攻略 地图指南</text>
+              </view>
+              <view style="width: 80px;">
+                <button class="bg-white">咨询</button>
+              </view>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+    
+    <!-- 为什么要做小程序 -->
+    <view class="cards bg-gray what">
+      <view class="title">为什么要做小程序</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+        <view class="over">
+          <view class="fix">
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/what_01.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">生态</text>
+                <text class="sub-title">共享微信全生态</text>
+                <text class="sub-title">触手可及的微信9亿用户</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/what_02.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">轻便</text>
+                <text class="sub-title">用户无需安装</text>
+                <text class="sub-title">用完即走，降低使用门槛</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/what_03.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">体验</text>
+                <text class="sub-title">全新的用户体验</text>
+                <text class="sub-title">效果堪比原生APP</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/what_04.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">场景</text>
+                <text class="sub-title">扩展业务场景</text>
+                <text class="sub-title">连接更多线上与线下服务</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/what_05.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">全面</text>
+                <text class="sub-title">功能全面</text>
+                <text class="sub-title">可以开发想要的功能</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/what_06.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">安全</text>
+                <text class="sub-title">微信已经解决会员</text>
+                <text class="sub-title">账号、支付、安全等问题</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 多入口聚集流量 -->
+    <view class="cards">
+      <view class="title">多入口聚集流量</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+        <view class="tabs">
+          <button class="items">搜索</button>
+          <button class="items">二维码</button>
+          <button class="items">微信聊天</button>
+          <button class="items">微信公众号</button>
+          <button class="items">微信好友</button>
+          <button class="items">切换</button>
+          <button class="items">微信群</button>
+          <button class="items">消息通知</button>
+          <button class="items">微信发现</button>
+          <button class="items">附近的小程序</button>
+          <button class="items">置顶</button>
+          <button class="items">期待</button>
+        </view>
+        <view class="docs">
+          <text>在小程序中搜索店铺名字</text>
+          <text>找到小程序</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 适用商户 -->
+    <view class="cards bg-gray seller">
+      <view class="title">适用商户</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+        <view class="over">
+          <view class="fix">
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_01.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">家居家纺</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_02.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">医疗健康</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_03.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">美容养生</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_04.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">生鲜果蔬</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_05.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">美容美妆</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_06.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">礼品鲜花</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_07.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">门店</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_08.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">蛋糕烘焙</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_09.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">日用百货</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_10.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">汽车服务</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_11.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">服装鞋帽</text>
+              </view>
+            </view>
+            <view class="item bg-white">
+              <view class="icon">
+                <image mode="widthFix" src="/assets/image/seller_12.png" class="slide-image" />
+              </view>
+              <view class="docs">
+                <text class="title">亲子母婴</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 小程序辅导计划 -->
+    <view class="cards coach">
+      <view class="title">小程序辅导计划</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+        <image mode="aspectFit" src="/assets/image/coach_bg_2.png" />
+        <view class="content">
+          <button class="consult">立即咨询</button>
+        </view>
+      </view>
+    </view>
+    
+    <view class="cards bg-gray">
+      <view class="title">行业解决方案</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+      
+      </view>
+    </view>
+    
+    <view class="cards bg-gray">
+      <view class="title">服务优势</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+      
+      </view>
+    </view>
+    
+    <view class="cards flow">
+      <view class="title">服务流程</view>
+      <view class="division"><image mode="widthFix" src="/assets/image/division.png" /></view>
+      <view class="body">
+        <image mode="aspectFit" src="/assets/image/flow_bg.png" />
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '微信小程序全流程服务'
+    }
+    components = {
+    }
+    onLoad() {
+    }
+  }
+</script>
